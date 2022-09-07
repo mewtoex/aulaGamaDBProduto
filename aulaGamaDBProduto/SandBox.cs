@@ -1,4 +1,5 @@
 ﻿using aulaGamaDBProduto.Dao;
+using aulaGamaDBProduto.Funcoes;
 using aulaGamaDBProduto.Test;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,16 @@ namespace aulaGamaDBProduto
     {
         static void Main(string[] args)
         {
-            var k = ProdutoTeste.ConsultarAllProduto();
-            var k2 = ProdutoTeste.ConsultaProdutoId(1);
-            using (var db = new gamaProdutoEntities())
+            Mensagems.inicio();
+            if ((bool)Acao.apagaOpcao(Leitura.lerTela()))
             {
 
+                Mensagems.opcoes();
+                Leitura.opcoes();
+
             }
-
-
+            else
+                Acao.sair();
         }
     }
 }

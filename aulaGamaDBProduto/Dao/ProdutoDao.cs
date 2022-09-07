@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient; 
 
 namespace aulaGamaDBProduto.Dao
 {
@@ -23,6 +24,7 @@ namespace aulaGamaDBProduto.Dao
         }
         public static List<produto> ConsultarAll()
         {
+
             DBClass = new DBClass();
             return  DBClass.db.produtoes.ToList();          
         }
